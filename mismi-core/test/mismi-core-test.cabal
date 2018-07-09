@@ -13,7 +13,7 @@ library
                      , mismi-core
                      , mismi-kernel
                      , mismi-kernel-test
-                     , ambiata-p
+                     , mismi-p
                      , exceptions                      >= 0.6        && < 0.9
                      , filepath                        >= 1.3        && < 1.5
                      , http-client                     >= 0.4.18     && < 0.6

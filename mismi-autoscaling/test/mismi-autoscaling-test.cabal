@@ -15,7 +15,7 @@ library
                      , mismi-autoscaling-core-test
                      , mismi-ec2-core
                      , mismi-iam-core
-                     , ambiata-p
+                     , mismi-p
                      , ambiata-twine
                      , retry                           == 0.7.*
                      , text                            == 1.2.*
