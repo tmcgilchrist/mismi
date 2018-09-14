@@ -67,7 +67,7 @@ import           P
 
 import           System.IO
 
-import           X.Control.Monad.Trans.Either
+import           Control.Monad.Trans.Either
 
 runAWST :: Env -> (Error -> e) -> EitherT e AWS a -> EitherT e IO a
 runAWST e err action =

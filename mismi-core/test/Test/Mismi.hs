@@ -21,7 +21,7 @@ import           System.IO (IO)
 import           Test.Mismi.Arbitrary ()
 import           Test.QuickCheck (Property, Testable)
 
-import           X.Control.Monad.Trans.Either (eitherT)
+import           Control.Monad.Trans.Either (eitherT)
 
 
 testAWS :: Testable a => AWS a -> Property

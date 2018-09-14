@@ -28,7 +28,7 @@ import           Test.QuickCheck
 import           Twine.Data (seconds)
 import           Twine.Snooze (snooze)
 
-import           X.Control.Monad.Trans.Either
+import           Control.Monad.Trans.Either
 
 prop_conf_create = once . testConf $ \cn -> do
   conf <- conf' cn

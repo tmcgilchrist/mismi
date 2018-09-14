@@ -16,7 +16,6 @@ library
                      , ambiata-p
                      , mismi-core
                      , mismi-ec2-core
-                     , ambiata-x-eithert
                      , amazonka                        >= 1.4.0      && < 1.6
                      , amazonka-core                   >= 1.4.0      && < 1.6
                      , amazonka-ec2                    >= 1.4.0      && < 1.6
@@ -25,6 +24,7 @@ library
                      , http-conduit                    >= 2.1.5      && < 2.3
                      , lens                            >= 4.8        && < 4.16
                      , text                            == 1.2.*
+                     , transformers-either             == 0.1.*
 
   ghc-options:
                        -Wall

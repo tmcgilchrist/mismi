@@ -43,7 +43,7 @@ import           Test.QuickCheck.Instances ()
 
 import           Twine.Parallel (RunError (..))
 
-import           X.Control.Monad.Trans.Either (runEitherT, eitherT)
+import           Control.Monad.Trans.Either (runEitherT, eitherT)
 
 prop_exists = testAWS $ do
   a <- newAddress

@@ -138,7 +138,7 @@ import           System.IO.Error (userError)
 import           Twine.Data.Queue (writeQueue)
 import           Twine.Parallel (RunError (..), consume)
 
-import           X.Control.Monad.Trans.Either (EitherT, eitherT, left, right, bimapEitherT, hoistMaybe
+import           Control.Monad.Trans.Either (EitherT, eitherT, left, right, bimapEitherT, hoistMaybe
                                                 , runEitherT, newEitherT)
 
 import qualified X.Data.Conduit.Binary as XB

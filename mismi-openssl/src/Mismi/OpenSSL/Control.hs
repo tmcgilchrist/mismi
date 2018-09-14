@@ -40,7 +40,7 @@ import           P
 
 import           System.IO
 
-import           X.Control.Monad.Trans.Either
+import           Control.Monad.Trans.Either
 
 runAWSTWithRegion :: Region -> (Error -> e) -> EitherT e AWS a -> EitherT e IO a
 runAWSTWithRegion r err action =

@@ -36,7 +36,7 @@ import           P
 
 import           System.IO (IO)
 
-import           X.Control.Monad.Trans.Either (EitherT)
+import           Control.Monad.Trans.Either (EitherT)
 
 discoverAWSEnv :: EitherT RegionError IO Env
 discoverAWSEnv =

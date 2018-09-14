@@ -21,17 +21,17 @@ executable s3
                      , mismi-s3-core
                      , ambiata-p
                      , ambiata-x-optparse
-                     , ambiata-x-eithert
                      , bytestring                      == 0.10.*
                      , conduit
                      , containers                      == 0.5.*
                      , exceptions
                      , filepath
                      , lens                            >= 4.8        && < 4.16
-                     , optparse-applicative            >= 0.11 && < 0.13
+                     , optparse-applicative            >= 0.11       && < 0.13
                      , resourcet
                      , text
                      , transformers
+                     , transformers-either             == 0.1.*
                      , unix
 
 test-suite test-cli

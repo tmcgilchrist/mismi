@@ -36,8 +36,8 @@ import           System.Posix.Process (exitImmediately)
 
 import           Text.Printf (printf)
 
-import           X.Control.Monad.Trans.Either.Exit (orDie)
-import           X.Control.Monad.Trans.Either (EitherT, eitherT, runEitherT, firstEitherT)
+import           Control.Monad.Trans.Either.Exit (orDie)
+import           Control.Monad.Trans.Either (EitherT, eitherT, runEitherT, firstEitherT)
 import           X.Options.Applicative (Completer, Parser, RunType (..), SafeCommand (..)
                                        , action, auto, command', flag, flag', help, long, metavar
                                        , pOption, option, short, value)

@@ -28,7 +28,7 @@ import           Test.Reliability.Reliability
 import           Test.QuickCheck
 import           Test.QuickCheck.Instances ()
 
-import           X.Control.Monad.Trans.Either (runEitherT)
+import           Control.Monad.Trans.Either (runEitherT)
 
 prop_sync = forAll (elements muppets) $ \m -> testAWS' $ \a b i -> do
   createSmallFiles a m i

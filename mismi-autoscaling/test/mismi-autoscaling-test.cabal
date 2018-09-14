@@ -17,10 +17,10 @@ library
                      , mismi-iam-core
                      , ambiata-p
                      , ambiata-twine
-                     , ambiata-x-eithert
                      , retry                           == 0.7.*
                      , text                            == 1.2.*
                      , transformers                    >= 0.3.1      && < 0.6
+                     , transformers-either             == 0.1.*
                      , QuickCheck                      >= 2.7        && < 2.10
                      , quickcheck-instances            == 0.3.*
 

@@ -46,7 +46,7 @@ import           Test.Mismi as X
 import           Test.Mismi.Arbitrary ()
 import           Test.Mismi.S3.Arbitrary ()
 
-import           X.Control.Monad.Trans.Either
+import           Control.Monad.Trans.Either
 
 data Token =
   Token {

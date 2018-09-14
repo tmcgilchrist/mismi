@@ -38,7 +38,7 @@ import           P
 import           System.Environment (lookupEnv)
 import           System.IO (IO, stderr)
 
-import           X.Control.Monad.Trans.Either (EitherT, left, right)
+import           Control.Monad.Trans.Either (EitherT, left, right)
 
 data RegionError =
     MissingRegion
