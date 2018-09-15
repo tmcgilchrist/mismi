@@ -1,0 +1,30 @@
+language: minimal
+sudo: required
+dist: trusty
+git:
+  submodules: false
+cache:
+  directories:
+  - "$HOME/.mafia"
+  - "$HOME/.cabal"
+matrix:
+  include:
+  - env: CABALVER=1.24 GHCVER=8.0.2
+    compiler: "ghc-8.0.2"
+    addons: {apt: {packages: [cabal-install-1.24,ghc-8.0.2], sources: [hvr-ghc]}}
+
+  - env: CABALVER=1.24 GHCVER=8.0.2
+    compiler: "ghc-8.0.2"
+    addons: {apt: {packages: [cabal-install-2.0,ghc-8.2.2], sources: [hvr-ghc]}}
+
+before_install:
+  # ghc
+  - export PATH=/opt/ghc/$GHCVER/bin:/opt/cabal/$CABALVER/bin:$PATH
+
+script:
+  # time it out before travis kills it.
+  # If travis times out the build, it wont save the cache, meaning the
+  # next build will also most likely timeout
+  # (travis_wait doesnt work btw, theres still a global timeout of
+  # approx 40 mins it seems.
+  - timeout 35m bin/ci
