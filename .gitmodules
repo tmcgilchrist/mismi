@@ -10,6 +10,3 @@
 [submodule "lib/twine"]
 	path = lib/twine
 	url = git@github.com:tmcgilchrist/twine
-[submodule "lib/amazonka"]
-	path = lib/amazonka
-	url = git@github.com:tmcgilchrist/amazonka
