@@ -1,12 +1,12 @@
 [submodule "lib/p"]
 	path = lib/p
-	url = git@github.com:tmcgilchrist/p.git
+	url = https://github.com/tmcgilchrist/p.git
 [submodule "lib/disorder"]
 	path = lib/disorder
-	url = git@github.com:tmcgilchrist/disorder.hs
+	url = https://github.com/tmcgilchrist/disorder.hs.git
 [submodule "lib/x"]
 	path = lib/x
-	url = git@github.com:tmcgilchrist/x
+	url = https://github.com/tmcgilchrist/x.git
 [submodule "lib/twine"]
 	path = lib/twine
-	url = git@github.com:tmcgilchrist/twine
+	url = https://github.com/tmcgilchrist/twine.git
