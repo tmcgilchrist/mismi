@@ -61,7 +61,7 @@ import           Network.AWS.S3 (ETag, ServerSideEncryption (..))
 
 import           System.FilePath (FilePath)
 
-import           Twine.Parallel (RunError (..), renderRunError)
+import           Entwine.Parallel (RunError (..), renderRunError)
 
 
 data PartResponse =

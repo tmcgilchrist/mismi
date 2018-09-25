@@ -135,7 +135,7 @@ import qualified "unix-bytestring" System.Posix.IO.ByteString as UBS
 import           System.Timeout.Lifted (timeout)
 import           System.IO.Error (userError)
 
-import           Twine.Data.Queue (writeQueue)
+import           Entwine.Data.Queue (writeQueue)
 import           Twine.Parallel (RunError (..), consume)
 
 import           Control.Monad.Trans.Either (EitherT, eitherT, left, right, bimapEitherT, hoistMaybe

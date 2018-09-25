@@ -14,7 +14,6 @@ library
   build-depends:
                        base                            >= 3          && < 6
                      , mismi-p
-                     , ambiata-x-show
                      , attoparsec                      >= 0.12       && < 0.14
                      , text                            == 1.2.*
 
@@ -27,6 +26,7 @@ library
 
   exposed-modules:
                        Mismi.S3.Core.Data
+                       Mismi.S3.Core.Show
 
 test-suite test
   type:                exitcode-stdio-1.0

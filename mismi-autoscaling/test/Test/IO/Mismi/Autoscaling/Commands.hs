@@ -25,8 +25,8 @@ import           Test.Mismi.Autoscaling.Control
 import           Test.Mismi.Autoscaling.Core.Arbitrary ()
 import           Test.QuickCheck
 
-import           Twine.Data (seconds)
-import           Twine.Snooze (snooze)
+import           Entwine.Data (seconds)
+import           Entwine.Snooze (snooze)
 
 import           Control.Monad.Trans.Either
 

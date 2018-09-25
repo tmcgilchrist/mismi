@@ -1,5 +1,4 @@
 {-# LANGUAGE NoImplicitPrelude #-}
-{-# LANGUAGE OverloadedStrings #-}
 module Mismi.OpenSSL.Environment (
     X.Env
   , X.Region (..)

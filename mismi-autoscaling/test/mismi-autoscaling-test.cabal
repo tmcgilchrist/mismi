@@ -16,7 +16,7 @@ library
                      , mismi-ec2-core
                      , mismi-iam-core
                      , mismi-p
-                     , ambiata-twine
+                     , entwine
                      , retry                           == 0.7.*
                      , text                            == 1.2.*
                      , transformers                    >= 0.3.1      && < 0.6

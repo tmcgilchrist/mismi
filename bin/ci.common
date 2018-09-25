@@ -5,7 +5,7 @@ git submodule update
 
 WORKING_DIR=$(pwd)
 
-find . -type f -name '*.cabal' | grep -v '^\./lib' | while read P; do
+find . -type f -name '*.cabal' | grep -v '^\./lib' | grep -v '\/test\/' | while read P; do
   cd "$(dirname "${P}")"
   ./mafia build
   # TODO comment this back in when circleci has the right AWS credentials

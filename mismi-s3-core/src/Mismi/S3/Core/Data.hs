@@ -41,7 +41,7 @@ import           GHC.Generics (Generic)
 
 import           P
 
-import           X.Text.Show (gshowsPrec)
+import           Mismi.S3.Core.Show (gshowsPrec)
 
 
 data WriteResult =

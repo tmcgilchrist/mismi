@@ -17,7 +17,7 @@ library
                      , mismi-s3-core
                      , mismi-s3-core-test
                      , mismi-p
-                     , ambiata-twine
+                     , entwine                         == 0.*
                      , lens                            >= 4.8        && < 4.16
                      , conduit                         == 1.2.*
                      , time                            >= 1.4        && < 1.9

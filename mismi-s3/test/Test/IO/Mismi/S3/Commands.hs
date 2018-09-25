@@ -41,7 +41,7 @@ import           Test.Mismi.S3
 import           Test.QuickCheck
 import           Test.QuickCheck.Instances ()
 
-import           Twine.Parallel (RunError (..))
+import           Entwine.Parallel (RunError (..))
 
 import           Control.Monad.Trans.Either (runEitherT, eitherT)
 

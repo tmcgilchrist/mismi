@@ -362,13 +362,13 @@ joinEitherE f =
 bimapJoin :: (Functor m, Monad m) => (x -> z) -> (y -> z) -> EitherT x (EitherT y m) a -> EitherT z m a
 bimapJoin f g =
   let
-    first h =
+    first' h =
       either (Left . h) Right
 
-    second =
+    second' =
       fmap
   in
-    joinEitherE (join . second (first f) . first g)
+    joinEitherE (join . second' (first' f) . first' g)
 {-# INLINE bimapJoin #-}
 
 joinErrors :: (Functor m, Monad m) => (x -> z) -> (y -> z) -> EitherT x (EitherT y m) a -> EitherT z m a
