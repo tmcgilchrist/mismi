@@ -88,7 +88,7 @@ import           Data.Conduit (Conduit, Source, ResumableSource)
 import           Data.Conduit (awaitForever)
 import qualified Data.Conduit as Conduit
 import qualified Data.Conduit.Internal as Conduit (ResumableSource(..), ConduitM(..), Pipe(..))
-import           Data.Conduit.Binary (sinkFile, sinkLbs)
+import           Data.Conduit.Binary (sinkFile, sinkLbs, sourceHandleRange)
 import qualified Data.Conduit.List as DC
 import           Data.IORef (IORef)
 import qualified Data.IORef as IORef
@@ -136,12 +136,10 @@ import           System.Timeout.Lifted (timeout)
 import           System.IO.Error (userError)
 
 import           Entwine.Data.Queue (writeQueue)
-import           Twine.Parallel (RunError (..), consume)
+import           Entwine.Parallel (RunError (..), consume)
 
 import           Control.Monad.Trans.Either (EitherT, eitherT, left, right, bimapEitherT, hoistMaybe
                                                 , runEitherT, newEitherT)
-
-import qualified X.Data.Conduit.Binary as XB
 
 -- | Retrieves the 'HeadObjectResponse'. Handles any 404 response by converting to Maybe.
 --
@@ -557,7 +555,8 @@ multipartUploadWorker e mpu file a (o, c, i) =
     let
       cs = (1024 * 1024) -- 1 mb
       cl = toInteger c
-      b = XB.slurpHandle h (toInteger o) (Just $ toInteger c)
+      -- b = XB.slurpHandle h (toInteger o) (Just $ toInteger c)
+      b = sourceHandleRange h (Just $ toInteger o) (Just $ toInteger c)
       cb = ChunkedBody cs cl b
       req' = f' A.uploadPart a i mpu $ Chunked cb
     in
