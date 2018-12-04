@@ -37,7 +37,7 @@ test-suite test
   hs-source-dirs:      test
   build-depends:       base
                      , ambiata-disorder-core
-                     , ambiata-disorder-corpus
+                     , hedgehog-corpus
                      , mismi-p
                      , mismi-autoscaling-core
                      , mismi-ec2-core
@@ -47,5 +47,6 @@ test-suite test
                      , time
                      , QuickCheck                      >= 2.7        && < 2.10
                      , quickcheck-instances            == 0.3.*
+
   other-modules:       Test.Mismi.Autoscaling.Core.Arbitrary
                        Test.Mismi.Autoscaling.Core.Data

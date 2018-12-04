@@ -7,7 +7,7 @@ library
   build-depends:
                        base                            >= 3          && < 6
                      , ambiata-disorder-core
-                     , ambiata-disorder-corpus
+                     , hedgehog-corpus
                      , mismi-s3-core
                      , mismi-p
                      , attoparsec

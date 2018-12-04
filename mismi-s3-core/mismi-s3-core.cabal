@@ -35,7 +35,7 @@ test-suite test
   hs-source-dirs:      test
   build-depends:       base
                      , ambiata-disorder-core
-                     , ambiata-disorder-corpus
+                     , hedgehog-corpus
                      , mismi-s3-core
                      , mismi-p
                      , attoparsec
@@ -43,3 +43,5 @@ test-suite test
                      , text
                      , QuickCheck                      >= 2.7        && < 2.10
                      , quickcheck-instances            == 0.3.*
+  other-modules:       Test.Mismi.S3.Core.Arbitrary
+                       Test.Mismi.S3.Core.Data

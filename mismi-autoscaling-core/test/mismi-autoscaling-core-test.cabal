@@ -7,7 +7,7 @@ library
   build-depends:
                        base
                      , ambiata-disorder-core
-                     , ambiata-disorder-corpus
+                     , hedgehog-corpus
                      , mismi-p
                      , mismi-autoscaling-core
                      , mismi-ec2-core

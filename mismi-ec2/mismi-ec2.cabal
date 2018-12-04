@@ -48,11 +48,13 @@ test-suite test
                      , ambiata-disorder-core
                      , mismi-p
                      , mismi-core
+                     , mismi-core-test
                      , mismi-ec2
                      , mismi-ec2-core-test
                      , QuickCheck                      >= 2.7        && < 2.10
                      , quickcheck-instances            == 0.3.*
-
+  other-modules:     Test.Mismi.EC2.Data
+                     Test.IO.Mismi.EC2.Commands
 
 test-suite test-io
   type:                exitcode-stdio-1.0
@@ -68,3 +70,4 @@ test-suite test-io
                      , mismi-ec2-core-test
                      , QuickCheck                      >= 2.7        && < 2.10
                      , quickcheck-instances            == 0.3.*
+  other-modules:     Test.IO.Mismi.EC2.Commands

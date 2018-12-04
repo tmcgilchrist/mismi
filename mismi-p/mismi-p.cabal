@@ -58,3 +58,14 @@ test-suite test
                      , quickcheck-properties
                      , mismi-p
                      , transformers
+  other-modules:       Test.P.Applicative
+                       Test.P.Bifunctor.Trans
+                       Test.P.Bifunctor.Trans.Laws
+                       Test.P.Bool
+                       Test.P.Either
+                       Test.P.Foldable
+                       Test.P.Function
+                       Test.P.List
+                       Test.P.Maybe
+                       Test.P.Monoid
+                       Test.P.Ord
