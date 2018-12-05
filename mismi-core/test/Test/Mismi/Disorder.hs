@@ -19,6 +19,8 @@ import           System.Exit
 import           System.IO
 import           System.CPUTime (getCPUTime)
 
+-- TODO Collapse this into single dependency with `mismi-disorder`
+
 testIO :: forall a. (Testable a) => IO a -> Property
 testIO mx = monadicIO $ do
   p <- (run mx)

@@ -4,7 +4,7 @@ module Test.Mismi.Autoscaling.Control where
 
 import           Control.Monad.IO.Class (MonadIO, liftIO)
 
-import           Disorder.Core.IO
+import           Mismi.Disorder.Core.IO
 
 import qualified Data.Text as T
 import qualified Data.Text.IO as T

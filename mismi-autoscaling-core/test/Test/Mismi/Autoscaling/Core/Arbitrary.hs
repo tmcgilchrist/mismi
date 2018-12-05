@@ -5,7 +5,7 @@ module Test.Mismi.Autoscaling.Core.Arbitrary where
 
 import qualified Data.Text as T
 
-import           Disorder.Core.Gen (genNonEmpty)
+import           Mismi.Disorder.Core.Gen (genNonEmpty)
 import           Hedgehog.Corpus
 
 import           Mismi.Autoscaling.Core.Data

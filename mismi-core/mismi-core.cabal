@@ -58,9 +58,9 @@ test-suite test
   ghc-options:         -Wall -threaded -O2
   hs-source-dirs:      test
   build-depends:       base
-                     , ambiata-disorder-core
-                     , ambiata-disorder-corpus
+                     , hedgehog-corpus
                      , mismi-core
+                     , mismi-disorder
                      , mismi-kernel
                      , mismi-kernel-test
                      , mismi-p

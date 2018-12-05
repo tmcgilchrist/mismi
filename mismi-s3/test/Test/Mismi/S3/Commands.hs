@@ -11,7 +11,7 @@ import           Data.Map.Strict (Map)
 import qualified Data.Map.Strict as DM
 import           Data.Time.Clock (NominalDiffTime, addUTCTime, getCurrentTime)
 
-import           Disorder.Core.IO (testIO)
+import           Mismi.Disorder.Core.IO (testIO)
 
 import           Mismi.S3.Commands
 import qualified Mismi.S3.Amazonka as A

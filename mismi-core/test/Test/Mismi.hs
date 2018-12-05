@@ -8,7 +8,7 @@ module Test.Mismi (
 
 import           Control.Monad.Catch (throwM)
 
-import           Disorder.Core.IO (testIO)
+import           Mismi.Disorder.Core.IO (testIO)
 
 import           Mismi
 

@@ -1,4 +1,4 @@
-import           Disorder.Core.Main
+import           Mismi.Disorder.Core.Main
 
 import qualified Test.IO.Mismi.S3.Commands
 import qualified Test.IO.Mismi.S3.Internal

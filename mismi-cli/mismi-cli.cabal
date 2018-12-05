@@ -64,4 +64,4 @@ test-suite test-cli
 
   build-depends:
                        base                            >= 3          && < 5
-                     , ambiata-disorder-core
+                     , mismi-disorder

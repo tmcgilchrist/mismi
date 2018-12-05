@@ -77,8 +77,8 @@ test-suite test
                      , amazonka
                      , amazonka-core
                      , amazonka-s3
-                     , ambiata-disorder-core
-                     , ambiata-disorder-corpus
+                     , mismi-disorder
+                     , hedgehog-corpus
                      , mismi-core
                      , mismi-core-test
                      , mismi-s3
@@ -115,8 +115,8 @@ test-suite test-io
                      , amazonka
                      , amazonka-core
                      , amazonka-s3
-                     , ambiata-disorder-core
-                     , ambiata-disorder-corpus
+                     , mismi-disorder
+                     , hedgehog-corpus
                      , mismi-core
                      , mismi-core-test
                      , mismi-s3
@@ -154,8 +154,8 @@ test-suite test-reliability
                      , amazonka
                      , amazonka-core
                      , amazonka-s3
-                     , ambiata-disorder-core
-                     , ambiata-disorder-corpus
+                     , mismi-disorder
+                     , hedgehog-corpus
                      , mismi-core
                      , mismi-core-test
                      , mismi-s3
@@ -188,7 +188,7 @@ benchmark bench
   ghc-options:         -Wall -threaded -O2
   hs-source-dirs:      test
   build-depends:       base
-                     , ambiata-disorder-corpus
+                     , hedgehog-corpus
                      , mismi-core
                      , mismi-core-test
                      , mismi-s3

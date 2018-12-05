@@ -12,7 +12,7 @@ import           Control.Retry (retrying, limitRetries, constantDelay)
 
 import qualified Data.Text as T
 
-import           Disorder.Corpus
+import           Hedgehog.Corpus
 
 import           Mismi (AWS)
 import           Mismi.Autoscaling.Core.Data

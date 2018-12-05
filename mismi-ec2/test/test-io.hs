@@ -1,4 +1,4 @@
-import           Disorder.Core.Main
+import           Mismi.Disorder.Core.Main
 
 import           Test.IO.Mismi.EC2.Commands
 

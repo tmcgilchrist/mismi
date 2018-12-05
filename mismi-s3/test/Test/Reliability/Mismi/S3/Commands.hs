@@ -11,7 +11,7 @@ import           Control.Monad.IO.Class
 import qualified Data.Text as T
 import qualified Data.Text.IO as T
 
-import           Disorder.Corpus
+import           Hedgehog.Corpus
 
 import           Mismi.S3
 

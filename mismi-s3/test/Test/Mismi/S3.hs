@@ -27,7 +27,7 @@ import qualified Data.Text.IO as T
 import           Data.UUID as U
 import           Data.UUID.V4 as U
 
-import           Disorder.Corpus
+import           Hedgehog.Corpus
 
 import           System.Environment (lookupEnv)
 import           System.Posix.Env

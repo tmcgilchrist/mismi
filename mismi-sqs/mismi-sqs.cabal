@@ -47,8 +47,8 @@ test-suite test
   build-depends:       base
                      , amazonka
                      , amazonka-core
-                     , ambiata-disorder-core
-                     , ambiata-disorder-corpus
+                     , mismi-disorder
+                     , hedgehog-corpus
                      , mismi-p
                      , mismi-core
                      , mismi-core-test
@@ -69,8 +69,8 @@ test-suite test-io
   build-depends:       base
                      , amazonka
                      , amazonka-core
-                     , ambiata-disorder-core
-                     , ambiata-disorder-corpus
+                     , mismi-disorder
+                     , hedgehog-corpus
                      , mismi-p
                      , mismi-core
                      , mismi-core-test

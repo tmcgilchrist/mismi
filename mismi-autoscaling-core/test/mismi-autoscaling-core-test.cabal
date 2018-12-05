@@ -6,7 +6,7 @@ build-type:            Simple
 library
   build-depends:
                        base
-                     , ambiata-disorder-core
+                     , mismi-disorder
                      , hedgehog-corpus
                      , mismi-p
                      , mismi-autoscaling-core

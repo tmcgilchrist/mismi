@@ -4,7 +4,7 @@ module Test.IO.Mismi.SQS.Aws.Commands where
 
 import           Control.Lens
 import           Data.Maybe
-import           Disorder.Core.IO
+import           Mismi.Disorder.Core.IO
 
 import qualified Mismi.SQS as A
 import           Mismi.SQS.Aws

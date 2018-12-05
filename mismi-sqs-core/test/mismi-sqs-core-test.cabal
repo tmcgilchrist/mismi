@@ -6,8 +6,8 @@ build-type:            Simple
 library
   build-depends:
                        base                            >= 3          && < 5
-                     , ambiata-disorder-core
-                     , ambiata-disorder-corpus
+                     , mismi-disorder
+                     , hedgehog-corpus
                      , mismi-kernel
                      , mismi-kernel-test
                      , mismi-sqs-core
