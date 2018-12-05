@@ -1,6 +1,0 @@
-[submodule "lib/disorder"]
-	path = lib/disorder
-	url = https://github.com/tmcgilchrist/disorder.hs.git
-[submodule "lib/x"]
-	path = lib/x
-	url = https://github.com/tmcgilchrist/x.git
