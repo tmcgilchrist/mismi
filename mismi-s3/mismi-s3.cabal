@@ -33,7 +33,7 @@ library
                      , http-types                      == 0.8.*
                      , lifted-async                    == 0.9.*
                      , mtl                             >= 2.1        && < 2.3
-                     , process                         >= 1.2        && < 1.5
+                     , process                         >= 1.2        && < 1.8
                      , resourcet                       == 1.1.*
                      , semigroups                      >= 0.16       && < 0.19
                      , text                            == 1.2.*
