@@ -1,5 +1,27 @@
 version: 2
 jobs:
+
+  build-8.0.2_2.0:
+    docker:
+      - image: tmcgilchrist/ci-haskell:ubuntu_xenial-8.0.2_2.0-20181024051959-a61e88f
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-mafia-8.0.2-{{ .Branch }}-{{ .Revision }}
+            - v1-mafia-8.0.2-{{ .Branch }}-
+            - mafia-work-
+      - run:
+          name: Build
+          command: ./bin/ci
+
+      - save_cache:
+          paths:
+            - /root/.cabal
+            - /root/.mafia/
+          key: v1-mafia-8.0.2-{{ .Branch }}-{{ .Revision }}
+
+
   build-8.2.2_2.0:
     docker:
       - image: tmcgilchrist/ci-haskell:ubuntu_xenial-8.2.2_2.0-20180915120131-4210fd6
@@ -24,4 +46,5 @@ workflows:
   version: 2
   build:
     jobs:
+      - build-8.0.2_2.0
       - build-8.2.2_2.0
