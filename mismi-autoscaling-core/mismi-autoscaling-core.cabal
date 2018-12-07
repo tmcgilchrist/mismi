@@ -1,6 +1,6 @@
-name:                  ambiata-mismi-autoscaling-core
+name:                  mismi-autoscaling-core
 version:               0.0.1
-license:               Apache-2.0
+license:               BSD3
 author:                Ambiata <info@ambiata.com>
 maintainer:            Ambiata <info@ambiata.com>
 copyright:             (c) 2015 Ambiata
@@ -13,9 +13,9 @@ description:           mismi-autoscaling-core.
 library
   build-depends:
                        base                            >= 3          && < 5
-                     , ambiata-p
-                     , ambiata-mismi-ec2-core
-                     , ambiata-mismi-iam-core
+                     , mismi-p
+                     , mismi-ec2-core
+                     , mismi-iam-core
                      , semigroups                      >= 0.16       && < 0.19
                      , text                            == 1.2.*
                      , time                            >= 1.4        && < 1.9
@@ -36,14 +36,17 @@ test-suite test
   ghc-options:         -Wall -threaded -O2
   hs-source-dirs:      test
   build-depends:       base
-                     , ambiata-disorder-core
-                     , ambiata-disorder-corpus
-                     , ambiata-p
-                     , ambiata-mismi-autoscaling-core
-                     , ambiata-mismi-ec2-core
-                     , ambiata-mismi-ec2-core-test
+                     , mismi-disorder
+                     , hedgehog-corpus
+                     , mismi-p
+                     , mismi-autoscaling-core
+                     , mismi-ec2-core
+                     , mismi-ec2-core-test
                      , semigroups                      >= 0.16       && < 0.19
                      , text
                      , time
                      , QuickCheck                      >= 2.7        && < 2.10
                      , quickcheck-instances            == 0.3.*
+
+  other-modules:       Test.Mismi.Autoscaling.Core.Arbitrary
+                       Test.Mismi.Autoscaling.Core.Data

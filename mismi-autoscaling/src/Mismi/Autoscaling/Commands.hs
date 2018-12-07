@@ -42,7 +42,7 @@ import           Mismi.IAM.Core.Data (IamRole (..))
 
 import           P
 
-import           X.Control.Monad.Trans.Either (EitherT, newEitherT)
+import           Control.Monad.Trans.Either (EitherT, newEitherT)
 
 createConfiguration :: Configuration -> AWS ()
 createConfiguration c = do

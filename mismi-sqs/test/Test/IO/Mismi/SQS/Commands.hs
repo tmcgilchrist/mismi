@@ -4,7 +4,7 @@ module Test.IO.Mismi.SQS.Commands where
 
 import           Control.Lens
 import           Data.Maybe
-import           Disorder.Core.IO
+import           Mismi.Disorder.Core.IO
 
 import           Mismi.SQS
 import           Mismi.SQS.Amazonka hiding (createQueue, deleteMessage)

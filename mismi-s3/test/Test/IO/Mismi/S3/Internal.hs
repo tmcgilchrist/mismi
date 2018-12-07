@@ -9,7 +9,7 @@ import           Control.Monad.Catch (catchIOError)
 
 import           Data.Text.IO as T
 
-import           Disorder.Core.IO
+import           Mismi.Disorder.Core.IO
 
 import           Mismi.S3.Internal
 

@@ -1,4 +1,4 @@
-import           Disorder.Core.Main
+import           Mismi.Disorder.Core.Main
 
 main :: IO ()
 main =

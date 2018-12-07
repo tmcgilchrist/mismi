@@ -1,4 +1,4 @@
-name:                  ambiata-mismi-sqs-test
+name:                  mismi-sqs-test
 version:               0.0.1
 cabal-version:         >= 1.8
 build-type:            Simple
@@ -8,15 +8,14 @@ library
                        base                            >= 3          && < 5
                      , amazonka                        >= 1.3.6      && < 1.6
                      , amazonka-core                   >= 1.3.6      && < 1.6
-                     , ambiata-disorder-core
-                     , ambiata-disorder-corpus
-                     , ambiata-mismi-core
-                     , ambiata-mismi-core-test
-                     , ambiata-mismi-sqs-core
-                     , ambiata-mismi-sqs-core-test
-                     , ambiata-mismi-sqs
-                     , ambiata-p
-                     , ambiata-x-eithert
+                     , mismi-disorder
+                     , hedgehog-corpus
+                     , mismi-core
+                     , mismi-core-test
+                     , mismi-sqs-core
+                     , mismi-sqs-core-test
+                     , mismi-sqs
+                     , mismi-p
                      , exceptions                      >= 0.6        && < 0.9
                      , filepath                        >= 1.3        && < 1.5
                      , text                            == 1.2.*
@@ -25,6 +24,7 @@ library
                      , quickcheck-instances            == 0.3.*
                      , unix                            == 2.7.*
                      , temporary                       == 1.2.*
+                     , transformers-either             == 0.1.*
                      , uuid                            == 1.3.*
 
   exposed-modules:

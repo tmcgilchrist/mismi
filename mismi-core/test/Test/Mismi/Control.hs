@@ -11,7 +11,7 @@ import           Control.Monad.Trans.Resource
 import           Data.IORef
 import           Data.Text
 
-import           Disorder.Core.IO
+import           Mismi.Disorder.Core.IO
 
 import           Mismi.Control
 

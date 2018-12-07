@@ -2,8 +2,8 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE LambdaCase #-}
 
-import           BuildInfo_ambiata_mismi_cli
-import           DependencyInfo_ambiata_mismi_cli
+import           BuildInfo_mismi_cli
+import           DependencyInfo_mismi_cli
 
 import           Control.Lens (over, set)
 import           Control.Monad.IO.Class (MonadIO, liftIO)
@@ -36,12 +36,12 @@ import           System.Posix.Process (exitImmediately)
 
 import           Text.Printf (printf)
 
-import           X.Control.Monad.Trans.Either.Exit (orDie)
-import           X.Control.Monad.Trans.Either (EitherT, eitherT, runEitherT, firstEitherT)
-import           X.Options.Applicative (Completer, Parser, RunType (..), SafeCommand (..)
+import           Control.Monad.Trans.Either.Exit (orDie)
+import           Control.Monad.Trans.Either (EitherT, eitherT, runEitherT, firstEitherT)
+import           Mismi.Cli.Options (Completer, Parser, RunType (..), SafeCommand (..)
                                        , action, auto, command', flag, flag', help, long, metavar
                                        , pOption, option, short, value)
-import qualified X.Options.Applicative as XOA
+import qualified Mismi.Cli.Options as XOA
 
 data Recursive =
     NotRecursive

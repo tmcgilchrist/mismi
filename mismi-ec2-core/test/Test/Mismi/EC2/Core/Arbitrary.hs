@@ -4,7 +4,7 @@ module Test.Mismi.EC2.Core.Arbitrary where
 
 import qualified Data.Text as T
 
-import           Disorder.Corpus
+import           Hedgehog.Corpus
 
 import           Mismi.EC2.Core.Data
 

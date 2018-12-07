@@ -1,4 +1,4 @@
-name:                  ambiata-mismi-s3-core-test
+name:                  mismi-s3-core-test
 version:               0.0.1
 cabal-version:         >= 1.8
 build-type:            Simple
@@ -6,10 +6,10 @@ build-type:            Simple
 library
   build-depends:
                        base                            >= 3          && < 6
-                     , ambiata-disorder-core
-                     , ambiata-disorder-corpus
-                     , ambiata-mismi-s3-core
-                     , ambiata-p
+                     , mismi-disorder
+                     , hedgehog-corpus
+                     , mismi-s3-core
+                     , mismi-p
                      , attoparsec
                      , filepath                        >= 1.3        && < 1.5
                      , text

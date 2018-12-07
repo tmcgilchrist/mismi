@@ -1,6 +1,6 @@
-name:                  ambiata-mismi-iam-core
+name:                  mismi-iam-core
 version:               0.0.1
-license:               Apache-2.0
+license:               BSD3
 author:                Ambiata <info@ambiata.com>
 maintainer:            Ambiata <info@ambiata.com>
 copyright:             (c) 2015 Ambiata
@@ -13,7 +13,7 @@ description:           mismi-iam-core.
 library
   build-depends:
                        base                            >= 3          && < 5
-                     , ambiata-p
+                     , mismi-p
                      , text                            == 1.2.*
 
   ghc-options:

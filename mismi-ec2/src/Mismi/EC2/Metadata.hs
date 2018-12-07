@@ -35,8 +35,8 @@ import           P
 
 import           System.IO (IO)
 
-import           X.Control.Monad.Trans.Either (EitherT, pattern EitherT)
-import           X.Control.Monad.Trans.Either (hoistEither)
+import           Control.Monad.Trans.Either (EitherT, pattern EitherT)
+import           Control.Monad.Trans.Either (hoistEither)
 
 
 data MetadataError =

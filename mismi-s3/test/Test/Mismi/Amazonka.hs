@@ -23,7 +23,7 @@ import           Test.Mismi.S3
 import           Test.QuickCheck
 import           Test.QuickCheck.Instances ()
 
-import           X.Control.Monad.Trans.Either
+import           Control.Monad.Trans.Either
 
 sendMultipart :: Text -> Address -> Int -> Text -> AWS ()
 sendMultipart t a i ui = do

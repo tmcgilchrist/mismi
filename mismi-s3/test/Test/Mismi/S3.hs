@@ -27,7 +27,7 @@ import qualified Data.Text.IO as T
 import           Data.UUID as U
 import           Data.UUID.V4 as U
 
-import           Disorder.Corpus
+import           Hedgehog.Corpus
 
 import           System.Environment (lookupEnv)
 import           System.Posix.Env
@@ -46,7 +46,7 @@ import           Test.Mismi as X
 import           Test.Mismi.Arbitrary ()
 import           Test.Mismi.S3.Arbitrary ()
 
-import           X.Control.Monad.Trans.Either
+import           Control.Monad.Trans.Either
 
 data Token =
   Token {

@@ -38,7 +38,7 @@ import           P
 import           System.Environment (lookupEnv)
 import           System.IO (IO, stderr)
 
-import           X.Control.Monad.Trans.Either (EitherT, left, right)
+import           Control.Monad.Trans.Either (EitherT, left, right)
 
 data RegionError =
     MissingRegion
@@ -104,7 +104,6 @@ discoverAWSEnvWithRegionRetry rpol r = do
   d <- getDebugging
   e <- recovering rpol [(\_ -> Handler catchAuthError)] $ \_ -> newMismiEnv r Discover
   pure $ setDebugging d e
-
 
 newMismiEnv :: (Applicative m, MonadIO m, MonadCatch m) => Region -> Credentials -> m Env
 newMismiEnv r c = do

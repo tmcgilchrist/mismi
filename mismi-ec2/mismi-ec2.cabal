@@ -1,6 +1,6 @@
-name:                  ambiata-mismi-ec2
+name:                  mismi-ec2
 version:               0.0.1
-license:               Apache-2.0
+license:               BSD3
 author:                Ambiata <info@ambiata.com>
 maintainer:            Ambiata <info@ambiata.com>
 copyright:             (c) 2015 Ambiata
@@ -13,10 +13,9 @@ description:           mismi-ec2.
 library
   build-depends:
                        base                            >= 3          && < 6
-                     , ambiata-p
-                     , ambiata-mismi-core
-                     , ambiata-mismi-ec2-core
-                     , ambiata-x-eithert
+                     , mismi-p
+                     , mismi-core
+                     , mismi-ec2-core
                      , amazonka                        >= 1.4.0      && < 1.6
                      , amazonka-core                   >= 1.4.0      && < 1.6
                      , amazonka-ec2                    >= 1.4.0      && < 1.6
@@ -25,6 +24,7 @@ library
                      , http-conduit                    >= 2.1.5      && < 2.3
                      , lens                            >= 4.8        && < 4.16
                      , text                            == 1.2.*
+                     , transformers-either             == 0.1.*
 
   ghc-options:
                        -Wall
@@ -45,14 +45,17 @@ test-suite test
   ghc-options:         -Wall -threaded -O2
   hs-source-dirs:      test
   build-depends:       base
-                     , ambiata-disorder-core
-                     , ambiata-p
-                     , ambiata-mismi-core
-                     , ambiata-mismi-ec2
-                     , ambiata-mismi-ec2-core-test
+                     , mismi-disorder
+                     , mismi-p
+                     , mismi-core
+                     , mismi-core-test
+                     , mismi-ec2
+                     , mismi-ec2-core-test
                      , QuickCheck                      >= 2.7        && < 2.10
                      , quickcheck-instances            == 0.3.*
 
+  other-modules:     Test.Mismi.EC2.Data
+                     Test.IO.Mismi.EC2.Commands
 
 test-suite test-io
   type:                exitcode-stdio-1.0
@@ -60,11 +63,13 @@ test-suite test-io
   ghc-options:         -Wall -threaded -O2
   hs-source-dirs:      test
   build-depends:       base
-                     , ambiata-disorder-core
-                     , ambiata-p
-                     , ambiata-mismi-core
-                     , ambiata-mismi-core-test
-                     , ambiata-mismi-ec2
-                     , ambiata-mismi-ec2-core-test
+                     , mismi-disorder
+                     , mismi-p
+                     , mismi-core
+                     , mismi-core-test
+                     , mismi-ec2
+                     , mismi-ec2-core-test
                      , QuickCheck                      >= 2.7        && < 2.10
                      , quickcheck-instances            == 0.3.*
+
+  other-modules:     Test.IO.Mismi.EC2.Commands

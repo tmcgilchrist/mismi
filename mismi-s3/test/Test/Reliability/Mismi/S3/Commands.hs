@@ -11,7 +11,7 @@ import           Control.Monad.IO.Class
 import qualified Data.Text as T
 import qualified Data.Text.IO as T
 
-import           Disorder.Corpus
+import           Hedgehog.Corpus
 
 import           Mismi.S3
 
@@ -28,7 +28,7 @@ import           Test.Reliability.Reliability
 import           Test.QuickCheck
 import           Test.QuickCheck.Instances ()
 
-import           X.Control.Monad.Trans.Either (runEitherT)
+import           Control.Monad.Trans.Either (runEitherT)
 
 prop_sync = forAll (elements muppets) $ \m -> testAWS' $ \a b i -> do
   createSmallFiles a m i

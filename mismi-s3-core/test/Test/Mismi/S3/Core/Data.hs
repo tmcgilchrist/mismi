@@ -5,7 +5,7 @@ module Test.Mismi.S3.Core.Data where
 
 import           Data.Text as T
 import           Data.List as L (sort)
-import           Disorder.Corpus
+import           Hedgehog.Corpus
 
 import           Mismi.S3.Core.Data
 

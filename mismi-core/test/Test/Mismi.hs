@@ -8,7 +8,7 @@ module Test.Mismi (
 
 import           Control.Monad.Catch (throwM)
 
-import           Disorder.Core.IO (testIO)
+import           Mismi.Disorder.Core.IO (testIO)
 
 import           Mismi
 
@@ -21,7 +21,7 @@ import           System.IO (IO)
 import           Test.Mismi.Arbitrary ()
 import           Test.QuickCheck (Property, Testable)
 
-import           X.Control.Monad.Trans.Either (eitherT)
+import           Control.Monad.Trans.Either (eitherT)
 
 
 testAWS :: Testable a => AWS a -> Property

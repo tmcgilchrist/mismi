@@ -1,4 +1,4 @@
-import           Disorder.Core.Main
+import           Mismi.Disorder.Core.Main
 
 import qualified Test.IO.Mismi.SQS.Commands
 import qualified Test.IO.Mismi.SQS.Control

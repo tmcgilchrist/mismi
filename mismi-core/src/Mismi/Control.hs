@@ -67,7 +67,7 @@ import           P
 
 import           System.IO
 
-import           X.Control.Monad.Trans.Either
+import           Control.Monad.Trans.Either
 
 runAWST :: Env -> (Error -> e) -> EitherT e AWS a -> EitherT e IO a
 runAWST e err action =
@@ -344,3 +344,34 @@ handleServiceError f pass action =
         throwM e
       TransportError _ ->
         throwM e
+
+mapEitherE :: Functor m => (Either x a -> Either y b) -> EitherT x m a -> EitherT y m b
+mapEitherE f =
+  mapEitherT (fmap f)
+{-# INLINE mapEitherE #-}
+
+joinEitherE ::
+     Functor m
+  => (Either y (Either x a) -> Either z b)
+  -> EitherT x (EitherT y m) a
+  -> EitherT z m b
+joinEitherE f =
+  mapEitherE f . runEitherT
+{-# INLINE joinEitherE #-}
+
+bimapJoin :: (Functor m, Monad m) => (x -> z) -> (y -> z) -> EitherT x (EitherT y m) a -> EitherT z m a
+bimapJoin f g =
+  let
+    first' h =
+      either (Left . h) Right
+
+    second' =
+      fmap
+  in
+    joinEitherE (join . second' (first' f) . first' g)
+{-# INLINE bimapJoin #-}
+
+joinErrors :: (Functor m, Monad m) => (x -> z) -> (y -> z) -> EitherT x (EitherT y m) a -> EitherT z m a
+joinErrors =
+  bimapJoin
+{-# INLINE joinErrors #-}

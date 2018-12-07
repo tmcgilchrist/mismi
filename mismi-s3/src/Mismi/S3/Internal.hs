@@ -36,7 +36,7 @@ import           System.Directory (renameFile, removeFile)
 import           System.IO (IO)
 import           System.FilePath (FilePath, takeDirectory, takeFileName)
 
-import           Twine.Data (Queue, writeQueue)
+import           Entwine.Data (Queue, writeQueue)
 
 
 f' :: (BucketName -> ObjectKey -> a) -> Address -> a

@@ -20,7 +20,7 @@ import           Test.Mismi
 
 import           Test.QuickCheck.Instances ()
 
-import           X.Control.Monad.Trans.Either (EitherT, eitherT, mapEitherT)
+import           Control.Monad.Trans.Either (EitherT, eitherT, mapEitherT)
 
 createFiles :: Address -> Int -> AWS ()
 createFiles prefix n = do

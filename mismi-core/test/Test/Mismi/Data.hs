@@ -4,7 +4,7 @@
 {-# OPTIONS_GHC -fno-warn-missing-signatures #-}
 module Test.Mismi.Data where
 
-import           Disorder.Core
+import           Mismi.Disorder.Core.Tripping
 
 import           Mismi.Data
 

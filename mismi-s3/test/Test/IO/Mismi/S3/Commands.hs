@@ -20,8 +20,9 @@ import qualified Data.Text as T
 import qualified Data.Text.Encoding as T
 import qualified Data.Text.IO as T
 
-import           Disorder.Core
-import           Disorder.Corpus
+import           Mismi.Disorder.Core.Property (failWith)
+import           Mismi.Disorder.Core.UniquePair
+import           Hedgehog.Corpus
 
 import           Control.Lens hiding (elements)
 
@@ -41,9 +42,9 @@ import           Test.Mismi.S3
 import           Test.QuickCheck
 import           Test.QuickCheck.Instances ()
 
-import           Twine.Parallel (RunError (..))
+import           Entwine.Parallel (RunError (..))
 
-import           X.Control.Monad.Trans.Either (runEitherT, eitherT)
+import           Control.Monad.Trans.Either (runEitherT, eitherT)
 
 prop_exists = testAWS $ do
   a <- newAddress

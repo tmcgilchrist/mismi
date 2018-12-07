@@ -6,7 +6,7 @@ module Test.Mismi.S3.Core.Arbitrary where
 import qualified Data.List as L
 import qualified Data.Text as T
 
-import           Disorder.Corpus (simpsons, southpark)
+import           Hedgehog.Corpus (simpsons, southpark)
 
 import           Mismi.S3.Core.Data
 
