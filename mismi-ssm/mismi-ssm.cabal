@@ -1,0 +1,97 @@
+version: 0.0.4
+
+name:
+  mismi-ssm
+author:
+  Nick Hibberd, Tim McGilchrist
+maintainer:
+  Nick Hibberd <nhibberd@gmail.com>
+homepage:
+  https://github.com/nhibberd/mismi
+bug-reports:
+  https://github.com/nhibberd/mismi/issues
+synopsis:
+  AWS Library
+description:
+  mismi-ssm is a library that provides a set of common and useful
+  operations on top of AWS Simple Systems Manager.
+category:
+  AWS
+license:
+  BSD3
+license-file:
+  LICENSE
+cabal-version:
+  >= 1.8
+build-type:
+  Simple
+tested-with:
+    GHC == 8.2.2
+  , GHC == 8.4.3
+  , GHC == 8.6.3
+extra-source-files:
+  CHANGELOG.md
+
+library
+  build-depends:
+      base                            >= 3          && < 6
+    , mismi-p
+    , mismi-core
+    , amazonka-ssm                    >= 1.4.0      && < 1.7
+    , lens                            >= 4.8        && < 4.18
+
+  ghc-options:
+    -Wall
+
+  hs-source-dirs:
+    src
+
+  exposed-modules:
+    Mismi.SSM.Amazonka
+
+
+test-suite test
+  type:
+    exitcode-stdio-1.0
+
+  main-is:
+    test.hs
+
+  ghc-options:
+    -Wall -threaded -O2
+
+  hs-source-dirs:
+    test
+
+  other-modules:
+    Test.Mismi.Amazonka    
+
+  build-depends:
+      base
+    , mismi-core                      == 0.0.3.*
+    , mismi-core-test                 == 0.0.3.*
+    , mismi-p
+    , hedgehog
+
+test-suite test-io
+  type:
+    exitcode-stdio-1.0
+
+  main-is:
+    test-io.hs
+
+  ghc-options:
+    -Wall -threaded -O2
+
+  hs-source-dirs:
+    test
+
+  other-modules:
+    Test.Mismi.Amazonka    
+
+  build-depends:
+      base
+    , mismi-core                      == 0.0.3.*
+    , mismi-core-test                 == 0.0.3.*
+    , mismi-p
+    , hedgehog
